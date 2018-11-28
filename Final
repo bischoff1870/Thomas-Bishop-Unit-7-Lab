@@ -1,0 +1,15 @@
+$processes = get-process 
+ foreach ($process in $processes.id)
+ { 
+ 
+  start-job {write-host 'processes'}
+  
+  read-host
+  }
+
+  
+  $confirmation = Read-Host "Ready? [y/n]"
+while($confirmation -ne "y")
+{
+    if ($confirmation -eq 'n') {exit}
+    $confirmation = Read-Host "Ready? [y/n]"
